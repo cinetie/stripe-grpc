@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package paymentPackage;
+
+service Payment {
+    rpc getPaymentLink(Type) returns (Link);
+}
+
+message Type {
+    string name = 1;
+    string email = 2;
+}
+
+message Link {
+    string link = 1;
+}
